@@ -149,10 +149,19 @@ async function testPassword (pswd, data) {
         }
         currentWordMatch = '';
     }    
-    console.log("Total matches occurances: " + matches);
-    console.log("Total match %: " + (matchesTotalLen / pswd.length)*100 + "%");
-    console.log(matchedWords);
+    // console.log("Total matches occurances: " + matches);
+    // console.log("Total match %: " + (matchesTotalLen / pswd.length)*100 + "%");
+    // console.log(matchedWords);
 
+    var finalstr = "Total matches occurances: " + matches + "<br>Total match %: " + (matchesTotalLen / pswd.length)*100 + "%<br>";
+
+    var len = Object.keys(matchedWords).length;
+    for (let i = 0; i < len; i++){
+        finalstr += "word "+ matchedWords[i].word+ " appears " + matchedWords[i].count + " times in " + matchedWords[i].location + "<br>";
+    }
+    //console.log(finalstr);
+    // alert(finalstr);
+    document.getElementById("result").innerHTML = finalstr;
 }
 
-testPassword("latte19960", data);
+//testPassword("latte19960", data);

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    <script type = "text/javascript">
+
+        async function sampleFunction() {
+            var input = await document.getElementById("name").value;
+            var result = await testPassword(input, data);
+            console.log(result)
+            // alert(await result)
+        }
+        
+        </script>
+
     <head>
         <meta charset="UTF-8">
         <Title>Hack.edu</Title>
@@ -101,26 +112,29 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
-                
+                <h1 style = font-size:50px >Hack Yourself</h2>
             </header>
             <body>
                 
                 <h1>Is 
                     <div>
                         <input type="text" id="name" name="name" required
-                        minlength="20" maxlength="20" size="20"> <button onclick="myFunction()">try</button>
+                        minlength="20" maxlength="20" size="20"> <button onclick="sampleFunction()">try</button>
                     </div>
 
-                    secure? </h1> 
-                    
+                    secure? <p id = "result"></p></h1> 
                      </body>
 
             
         </section>
+        <script src="app.js"></script>
         <section id = "about">
             <div>
-                <h1>
-                    We're team Hack.edu
+                <h1 style = text-align:center>
+                    We're team Hack.edu <br>
+                    <p style = font-size:15px;>We built this program to bring awareness and understanding to the amount of information available online and secure password chosing. Using things like your pet's name or maiden name are easily locatable information now
+                        and  leave you vulnerable to your account being hacked. People and companies lost $6.9 billion to cyber incidents in 2021. 
+                    Strong password practices and awareness of what information about yourself is easily found online is the first step towards protecting yourself against bad actors.</p>
                 </h1>
             </div>
         </section>

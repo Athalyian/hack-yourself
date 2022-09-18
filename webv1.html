@@ -1,0 +1,29 @@
+<html>
+
+<head>
+
+
+<script type = "text/javascript">
+
+async function sampleFunction() {
+    var input = await document.getElementById("password").value;
+    var result = await testPassword(input, data);
+    console.log(result)
+    // alert(await result)
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Click this button to Call the JavaScript function inside HTML</h1>
+<input type = "text" id= "password" name = "password">
+<input type = "button" onclick = "sampleFunction()" value = "Press me!">
+<p id = "result"></p>
+<script src="app.js"></script>
+</body>
+
+
+</html>
